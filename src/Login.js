@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from "./Authcontext";
 
-
 const BackgroundBox = styled(Box)(({ theme }) => ({
     minHeight: '100vh',
     display: 'flex',
@@ -16,7 +15,6 @@ const BackgroundBox = styled(Box)(({ theme }) => ({
     borderRadius: '20px', 
     boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', 
     textAlign: 'center',
-    width: '100%',
     width: '500px',
     height: '600px'
     
@@ -25,11 +23,11 @@ const BackgroundBox = styled(Box)(({ theme }) => ({
     outline:'1px solid #B2BEB5',
     backgroundColor:'black',
     color: 'white',  
-    borderRadius: '30px', // Rounded button
+    borderRadius: '30px', 
     fontSize: '16px',
     '&:hover': {
       backgroundColor: 'gray',
-      color:'white' // Darker green on hover
+      color:'white' 
     },
   }));
 
@@ -43,7 +41,7 @@ const Login = () => {
     const handleLogin = () => {
       const success = login(username, password);
       if(success){
-        navigate('/');
+        navigate('/todolist');
       }
     }
 
